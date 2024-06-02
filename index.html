@@ -1,0 +1,83 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Designing Marketing Campaignss</title>  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">  
+  <style>  
+    body {  
+      background-image: linear-gradient(to right, #74ebd5, #9face6);  
+    }  
+      
+    .form-card {  
+      background-color: #fff;  
+      padding: 30px;  
+      border-radius: 5px;  
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    }  
+    .center{
+    display: flex;
+    justify-content: center;
+    position: fixed;  
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+    z-index: 1000;  
+    background-color: rgba(255, 255, 255, 0.8);  
+    padding: 20px;  
+    border-radius: 10px;  
+}
+  </style>  
+</head>  
+<body>  
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+       
+        Designing Marketing Campaigns
+      </a>
+    </div>
+  </nav>
+  <div class="container">  
+    <div class="row justify-content-center">  
+      <div class="col-md-6">  
+        <div class="form-card mt-4">  
+          <h1 class="mb-4">Product Details</h1>  
+          <form id="productForm" method="POST" action="/generate" enctype = "multipart/form-data">  
+            
+              
+            <div class="mb-3">  
+              <label for="product_details" class="form-label" >Product Details</label>  
+              <textarea class="form-control" id="product_details" name="product_details" rows="4" placeholder="Enter product summary"></textarea>  
+            </div>  
+              
+            <div class="mb-3">  
+              <label for="product_details" class="form-label" >User Review </label>  
+              <textarea class="form-control" id="user_review" name="user_review" rows="4" placeholder="Enter image prompt"></textarea>
+            </div>  
+
+           
+
+            <div class="d-grid">  
+              <button type="submit" class="btn btn-primary">Generate Ad</button>  
+            </div>  
+          </form>  
+        </div>  
+      </div>  
+    </div>  
+
+    <div id ='loader' class ="center" style='display: none;'>
+      <img src="/static/Fidget-spinner.gif">
+  </div>  
+  <script>
+document.getElementById('productForm').addEventListener('submit', function() {
+    document.getElementById('loader').style.display = 'block';
+});
+
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>  
+</body>  
+</html>  

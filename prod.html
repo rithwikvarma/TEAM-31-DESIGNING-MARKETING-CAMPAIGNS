@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmoAdGenius</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add custom CSS for the card -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        .card {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .social-card {
+            height: auto;
+        }
+
+        .card-header {
+            text-align: center;
+        }
+
+        .card-title,
+        .card-text,
+        .card-subtitle {
+            font-family: 'Roboto';
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+        p.round1 span {
+            border-radius: 8px;
+            padding: 3px;
+            color: black;
+            background: #0C95F7;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <a class="navbar-brand" href="#">EmoAdGenius</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+               
+                
+            </ul>
+           
+        </div>
+    </nav>
+    <br>
+   
+
+
+    <br> 
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4>Advertisement</h4>
+            </div>
+            <div class="card-body">
+                <h6 class="card-subtitle mb-2">Detected Emotion:</h6>
+                <p class="round1"><span>{{ emotion }}</span></p>
+                <h6 class="card-subtitle mb-2">Ad Slogan:</h6>
+                <p class="card-text">{{ adSlogan }}</p>
+                <h6 class="card-subtitle mb-2">Ad Description:</h6>
+                <p class="card-text"><em>{{ ad_description }}</em></p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
